@@ -11,12 +11,9 @@ before_install:
     - sudo apt-get install cabal-install
     - cabal update
     - cabal install shellcheck
-    #- wget -O - https://github.com/koalaman/shellcheck/archive/master.zip | tar zxvf -
-    #- cd shellcheck-master
 
 install:
-    - curl -L dot.b4b4r07.com | bash
-    - cd $(dotpath); make init
+    - curl -L dot.b4b4r07.com | bash -s init
 
 script:
     - make --silent test
