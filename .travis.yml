@@ -8,8 +8,11 @@ env:
     - GOPATH=~
 
 before_install:
-    - sudo apt-get update
-    - sudo apt-get install shellcheck
+    - sudo apt-get install cabal-install
+    - cabal update
+    - cabal install shellcheck
+    #- wget -O - https://github.com/koalaman/shellcheck/archive/master.zip | tar zxvf -
+    #- cd shellcheck-master
 
 install:
     - curl -L dot.b4b4r07.com | bash
