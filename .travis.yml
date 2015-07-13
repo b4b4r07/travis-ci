@@ -1,7 +1,8 @@
-language: c
+language: objective-c
 os:
-    - linux
     - osx
+    - linux
+
 env:
   global:
     - GOPATH=~
@@ -9,6 +10,10 @@ env:
 sudo: required
 
 before_install:
+    - brew update
+    - brew install shellcheck
+
+install:
     - curl -L dot.b4b4r07.com | bash
     - cd $(dotpath); make init
 
