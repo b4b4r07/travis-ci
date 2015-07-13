@@ -1,4 +1,4 @@
-language: objective-c
+language: c
 os:
     - osx
     - linux
@@ -10,8 +10,8 @@ env:
 sudo: required
 
 before_install:
-    - brew update
-    - brew install shellcheck
+    - sudo apt-get update
+    - sudo apt-get install shellcheck
 
 install:
     - curl -L dot.b4b4r07.com | bash
