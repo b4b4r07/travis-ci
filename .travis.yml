@@ -1,0 +1,16 @@
+language: c
+os:
+    - linux
+    - osx
+env:
+  global:
+    - GOPATH=~
+
+sudo: required
+
+before_install:
+    - curl -L dot.b4b4r07.com | bash
+    - cd $(dotpath); make init
+
+script:
+    - make --silent test
