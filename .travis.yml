@@ -10,8 +10,9 @@ env:
 sudo: required
 
 before_install:
-    - curl -L dot.b4b4r07.com | bash
-    - make init
+    #- curl -L dot.b4b4r07.com | bash
+    #- make init
+    - curl -L dot.b4b4r07.com | bash -s init
 
 script:
     - make --silent test
