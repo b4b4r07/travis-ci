@@ -6,6 +6,7 @@ os:
 env:
   global:
     - GOPATH=~
+    - VITAL=1
 
 sudo: required
 
