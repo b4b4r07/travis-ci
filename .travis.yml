@@ -6,11 +6,12 @@ os:
 env:
   global:
     - GOPATH=~
+    - DOTPATH=~/dododo 
 
 sudo: required
 
 before_install:
-    - DOTPATH=~/dododo curl -L dot.b4b4r07.com | bash
+    - curl -L dot.b4b4r07.com | bash
     - cd $(dotpath)
     - make init
 
