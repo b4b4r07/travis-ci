@@ -2,15 +2,18 @@ language: c
 os:
     - linux
     - osx
+
 env:
   global:
+    - DOTPATH=~/.dotfiles
     - GOPATH=~
 
 sudo: required
 
 before_install:
-    - curl -L dot.b4b4r07.com | bash
-    - cd $(dotpath); make init
+    #- curl -L dot.b4b4r07.com | bash
+    #- cd $(dotpath); make init
+    - bash -c "$(curl -sL dot.b4b4r07.com)" -s init
 
 script:
     - make --silent test
