@@ -10,9 +10,10 @@ env:
 sudo: required
 
 before_install:
-    - curl -L dot.b4b4r07.com | bash
+    - DOTPATH=~/dododo curl -L dot.b4b4r07.com | bash
     - cd $(dotpath)
     - make init
 
 script:
+    - ls -l ~/.vimrc
     - make --silent test
