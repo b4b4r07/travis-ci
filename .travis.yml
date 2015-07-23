@@ -6,7 +6,7 @@ os:
 env:
   global:
     - GOPATH=~
-    - DOTPATH=~/dododo 
+    - DOTPATH=~/.dotfiles
 
 sudo: required
 
@@ -15,6 +15,8 @@ before_install:
     - cd $(dotpath)
     - make init
 
+install:
+    - sudo apt-get install shellcheck
+
 script:
-    - ls -l ~/.vimrc
     - make --silent test
