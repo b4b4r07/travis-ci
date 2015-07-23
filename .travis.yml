@@ -11,12 +11,12 @@ env:
 sudo: required
 
 before_install:
+    - sudo apt-get install shellcheck
+
+before_script:
     - curl -L dot.b4b4r07.com | bash
     - cd $(dotpath)
     - make init
-
-install:
-    - sudo apt-get install shellcheck
 
 script:
     - make --silent test
