@@ -12,8 +12,10 @@ sudo: required
 
 before_install:
     - curl -L dot.b4b4r07.com | bash
+
+before_script:
     - cd $(dotpath)
-    - make init
 
 script:
+    - make init
     - make --silent test
